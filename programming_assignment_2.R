@@ -1,6 +1,6 @@
 makeCacheMatrix <- function(M = matrix())
 {
-  ## Creates a special matric that can cache its inverse
+  ## Creates a special matrix that can cache its inverse
   
   inv_matrix <- NULL
   change_matrix <- function(y) {inv_matrix <<- NULL; M <<- y} # if it is wanted
