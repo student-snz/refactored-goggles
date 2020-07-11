@@ -1,5 +1,6 @@
 makeCacheMatrix <- function(M = matrix())
 {
+  ## Creates a special matric that can cache its inverse
   
   inv_matrix <- NULL
   change_matrix <- function(y) {inv_matrix <<- NULL; M <<- y} # if it is wanted
@@ -9,6 +10,8 @@ makeCacheMatrix <- function(M = matrix())
   list(change_matrix = change_matrix, set_inv_matrix = set_inv_matrix, get_matrix = get_matrix, get_inv_matrix = get_inv_matrix)
 }
 cacheSolve <- function(x, ...) {
+  ## Return a matrix that is the inverse of 'x'
+  
   #"x" is the object is returned by "makeCacheMatrix"
   Inv <- x$get_inv_matrix()
    if(!is.null(Inv)){
@@ -17,7 +20,7 @@ cacheSolve <- function(x, ...) {
   }
   #else
   Matr <- x$get_matrix()
-  Inv <- solve(Matr)
+  Inv <- solve(Matr, ...)
   x$set_inv_matrix(Inv)
   return(Inv)      
 }
