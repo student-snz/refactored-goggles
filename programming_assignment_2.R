@@ -8,7 +8,7 @@ makeCacheMatrix <- function(M = matrix())
   get_inv_matrix <- function() {return(inv_matrix)}
   list(change_matrix = change_matrix, set_inv_matrix = set_inv_matrix, get_matrix = get_matrix, get_inv_matrix = get_inv_matrix)
 }
-cacheSolve <- function(x) {
+cacheSolve <- function(x, ...) {
   #"x" is the object is returned by "makeCacheMatrix"
   Inv <- x$get_inv_matrix()
    if(!is.null(Inv)){
