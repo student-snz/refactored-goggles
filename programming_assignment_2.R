@@ -23,13 +23,13 @@ cacheSolve <- function(x, ...) {
 }
 
 
-x <- matrix(rnorm(16), nrow = 4, ncol = 4)
-x1 <- matrix(rnorm(16), nrow = 4, ncol = 4)
-xx <- makeCacheMatrix(x)
-xx1 <- makeCacheMatrix(x1)
+## x <- matrix(rnorm(16), nrow = 4, ncol = 4)
+## x1 <- matrix(rnorm(16), nrow = 4, ncol = 4)
+## xx <- makeCacheMatrix(x)
+## xx1 <- makeCacheMatrix(x1)
 
-cacheSolve(xx)
-cacheSolve(xx1)
-cacheSolve(xx1)
-cacheSolve(xx)
+## cacheSolve(xx)
+## cacheSolve(xx1)
+## cacheSolve(xx1)
+## cacheSolve(xx)
 
